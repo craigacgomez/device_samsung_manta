@@ -194,6 +194,18 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT="google/mantaray/manta:4.4.2/KOT49H/937116:user/release-keys" \
     PRIVATE_BUILD_DESC="mantaray-user 4.4.2 KOT49H 937116 release-keys"
 
+# media properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.facelock.black_timeout=700 \
+    ro.facelock.det_timeout=1500 \
+    ro.facelock.rec_timeout=2500 \
+    ro.facelock.lively_timeout=2500 \
+    ro.facelock.est_max_time=500 \
+    ro.facelock.use_intro_anim=true \
+    camera.flash_off=0 \
+    drm.service.enabled=true \
+    ro.com.widevine.cachesize=16777216
+
 $(call inherit-product-if-exists, hardware/samsung_slsi/exynos5/exynos5.mk)
 $(call inherit-product-if-exists, vendor/samsung_slsi/exynos5/exynos5-vendor.mk)
 $(call inherit-product-if-exists, vendor/samsung/manta/device-vendor.mk)
