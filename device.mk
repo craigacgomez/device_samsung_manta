@@ -34,7 +34,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/manta/manta-keypad.kl:system/usr/keylayout/manta-keypad.kl \
     device/samsung/manta/manta-keypad.kcm:system/usr/keychars/manta-keypad.kcm
 
-
 # Init files for booting smdk5250 with a manta image
 PRODUCT_COPY_FILES += \
     device/samsung/manta/init.smdk5250.rc:root/init.smdk5250.rc \
@@ -187,6 +186,13 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
+
+# overwrite product specific build properties
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=mantaray \
+    BUILD_DISPLAY_ID="ThunderKat $(shell date +%Y%m%d)" \
+    BUILD_FINGERPRINT="google/mantaray/manta:4.4.2/KOT49H/937116:user/release-keys" \
+    PRIVATE_BUILD_DESC="mantaray-user 4.4.2 KOT49H 937116 release-keys"
 
 $(call inherit-product-if-exists, hardware/samsung_slsi/exynos5/exynos5.mk)
 $(call inherit-product-if-exists, vendor/samsung_slsi/exynos5/exynos5-vendor.mk)
