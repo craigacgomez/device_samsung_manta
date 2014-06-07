@@ -92,9 +92,11 @@ BOARD_SEPOLICY_UNION := \
     app.te \
     device.te \
     domain.te \
-    gpsd.te \
     file.te \
+    gpsd.te \
+    installd.te \
     mediaserver.te \
     surfaceflinger.te \
     system.te \
-    vold.te
+    vold.te \
+    mac_permissions.xml

@@ -1,1 +1,4 @@
 type ffs, fs_type;
+
+# Support asec containers getting mounted
+allow file_type rootfs:filesystem associate;
