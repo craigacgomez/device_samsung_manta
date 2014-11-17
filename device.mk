@@ -20,6 +20,15 @@ else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
+# TODO: Enable F2FS for userimage after we add kernel support
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
+
+# This ensures the needed build tools are available.
+# TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
+ifeq ($(HOST_OS),linux)
+TARGET_USERIMAGES_USE_F2FS := false
+endif
+
 PRODUCT_COPY_FILES := \
     $(LOCAL_KERNEL):kernel \
     device/samsung/manta/init.manta.rc:root/init.manta.rc \
@@ -155,7 +164,7 @@ PRODUCT_PACKAGES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-    e2fsck
+    e2fsck fsck.f2fs mkfs.f2fs
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
