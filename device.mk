@@ -194,7 +194,9 @@ PRODUCT_PROPERTY_OVERRIDES := \
     fmas.spkr_6ch=35,20,110 \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
-    fmas.spkr_sgain=0
+    fmas.spkr_sgain=0 \
+    dalvik.vm.dex2oat-flags="--compiler-filter=interpret-only" \
+    dalvik.vm.image-dex2oat-flags=""
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
