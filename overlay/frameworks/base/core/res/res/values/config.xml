@@ -178,7 +178,7 @@
     <!-- Whether UI for multi user should be shown -->
     <bool name="config_enableMultiUserUI">true</bool>
 
-    <bool name="config_ui_enableFadingMarquee">false</bool>
+    <bool name="config_ui_enableFadingMarquee">true</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
@@ -191,6 +191,7 @@
 
     <bool name="config_enableWifiDisplay">true</bool>
 
-    <!-- Translucent status & navigation bars perform poorly on this device -->
-    <bool name="config_enableTranslucentDecor">false</bool>
+    <!-- Translucent status & navigation bars perform poorly on this device
+    	 but enable this feature anyway -->
+    <bool name="config_enableTranslucentDecor">true</bool>
 </resources>
