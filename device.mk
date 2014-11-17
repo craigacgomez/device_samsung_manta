@@ -188,6 +188,13 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.enable_boot_charger_mode=1
 
+# overwrite product specific build properties
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=mantaray \
+    BUILD_DISPLAY_ID="Lollipopalooza $(BUILD_ID) $(shell date +%Y%m%d)" \
+    BUILD_FINGERPRINT="google/mantaray/manta:5.0/LRX21P/1570855:user/release-keys" \
+    PRIVATE_BUILD_DESC="mantaray-user 5.0 LRX21P 1570855 release-keys"
+
 # for off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
