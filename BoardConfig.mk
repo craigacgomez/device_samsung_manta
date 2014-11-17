@@ -94,6 +94,7 @@ BOARD_SEPOLICY_UNION += \
 	file.te \
 	mediaserver.te \
 	system_server.te \
-	vold.te
+	vold.te \
+	mac_permissions.xml
 
 MALLOC_IMPL := dlmalloc
