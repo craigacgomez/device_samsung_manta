@@ -30,7 +30,7 @@
 /system/vendor/firmware/setfile_4e5.bin:../../../vendor/samsung/manta/proprietary/setfile_4e5.bin
 /system/vendor/firmware/setfile_6a3.bin:../../../vendor/samsung/manta/proprietary/setfile_6a3.bin
 /system/vendor/lib/egl/libGLES_mali.so:../../../vendor/samsung/manta/proprietary/libGLES_mali.so
-/system/vendor/lib/libbccArm.so:../../../vendor/samsung/manta/proprietary/libbccArm.bc
+/system/vendor/lib/libbccArm.bc:../../../vendor/samsung/manta/proprietary/libbccArm.bc
 /system/vendor/lib/libmalicore.bc:../../../vendor/samsung/manta/proprietary/libmalicore.bc
 /system/vendor/lib/libRSDriverArm.so:../../../vendor/samsung/manta/proprietary/libRSDriverArm.so
 /system/vendor/lib/libstagefright_hdcp.so:../../../vendor/samsung/manta/proprietary/libstagefright_hdcp.so
