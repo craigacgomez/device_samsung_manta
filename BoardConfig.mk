@@ -100,3 +100,5 @@ BOARD_SEPOLICY_UNION += \
 	mac_permissions.xml
 
 MALLOC_IMPL := dlmalloc
+
+BOARD_INV_LIBMLLITE_FROM_SOURCE := true
