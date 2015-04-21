@@ -194,32 +194,69 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=1024 \
     ro.hwui.disable_scissor_opt=true \
-    af.fast_track_multiplier=1 \
+    af.fast_track_multiplier=1
+
+# Google services properties
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.google.clientidbase=android-google \
     ro.com.android.wifi-watchlist=GoogleGuest \
     ro.error.receiver.system.apps=com.google.android.gms \
+    profiler.force_disable_err_rpt=1 \
+    profiler.force_disable_ulog=1 \
     ro.setupwizard.enterprise_mode=1 \
     ro.setupwizard.network_required=true \
     ro.setupwizard.require_network=wifi \
     ro.setupwizard.gservices_delay=-1 \
     keyguard.no_require_sim=true \
-    ro.facelock.black_timeout=700 \
+    ro.config.nocheckin=1
+
+# Performance & quality properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.use.dithering=1 \
+    persist.sys.purgeable_assets=1
+
+# Tethering properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tethering.noprovisioning=true \
+    persist.sys.dun.override=0
+
+# Facelock properties
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.facelock.black_timeout=400 \
     ro.facelock.det_timeout=1500 \
     ro.facelock.rec_timeout=2500 \
     ro.facelock.lively_timeout=2500 \
-    ro.facelock.est_max_time=500 \
-    ro.facelock.use_intro_anim=true \
+    ro.facelock.est_max_time=600 \
+    ro.facelock.use_intro_anim=false
+
+# Media properties
+PRODUCT_PROPERTY_OVERRIDES += \
     camera.flash_off=0 \
     drm.service.enabled=true \
     ro.com.widevine.cachesize=16777216 \
     fmas.spkr_6ch=35,20,110 \
     fmas.spkr_2ch=35,25 \
     fmas.spkr_angles=10 \
-    fmas.spkr_sgain=0 \
-    dalvik.vm.dex2oat-flags="--compiler-filter=interpret-only" \
-    dalvik.vm.image-dex2oat-flags=""
+    fmas.spkr_sgain=0
+
+# Networking tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.dns1=8.8.8.8 \
+    net.dns2=8.8.4.4 \
+    net.rmnet0.dns1=8.8.8.8 \
+    net.rmnet0.dns2=8.8.4.4 \
+    net.ppp0.dns1=8.8.8.8 \
+    net.ppp0.dns2=8.8.4.4 \
+    net.wlan0.dns1=8.8.8.8 \
+    net.wlan0.dns2=8.8.4.4 \
+    net.eth0.dns1=8.8.8.8 \
+    net.eth0.dns2=8.8.4.4 \
+    net.gprs.dns1=8.8.8.8 \
+    net.gprs.dns2=8.8.4.4 \
+    persist.telephony.support.ipv6=1 \
+    persist.telephony.support.ipv4=1
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
