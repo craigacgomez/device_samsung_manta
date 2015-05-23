@@ -278,8 +278,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=mantaray \
     BUILD_DISPLAY_ID="Lollipopalooza $(BUILD_ID) $(shell date +%Y%m%d)" \
-    BUILD_FINGERPRINT="google/mantaray/manta:5.1/LMY47D/1743759:user/release-keys" \
-    PRIVATE_BUILD_DESC="mantaray-user 5.1 LMY47D 1743759 release-keys"
+    BUILD_FINGERPRINT="google/mantaray/manta:5.1.1/LMY47V/1836172:user/release-keys" \
+    PRIVATE_BUILD_DESC="mantaray-user 5.1.1 LMY47V 1836172 release-keys"
 
 # for off charging mode
 PRODUCT_PACKAGES += \
